@@ -1,0 +1,28 @@
+<% @page_title = "マイページ" %>
+
+<h1><%= @page_title %></h1>
+
+<p><%= link_to "編集", [:edit, @user] %></p>
+<p><%= link_to "戻る", users_path %></p>
+
+<table>
+	<tr>
+		<th>氏名</th>
+		<td><%= @user.name %></td>
+	</tr>
+	<tr>
+		<th>職業</th>
+		<td><%= @user.job %></td>
+	</tr>
+	<tr>
+		<th>紹介文</th>
+		<td><%= @user.description %></td>
+	</tr>
+
+	<tr>
+		<th>Image</th>
+		<td><%= image_tag @user.image_url %></td>
+	</tr>
+
+</table>
+
