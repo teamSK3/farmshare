@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 		params.permit!
 		@user = User.find(params[:id])
 		@user.assign_attributes(params[:user])
-		if
+		if @user.save
 			redirect_to @user, notice: "会員情報を更新しました。"
 		else
 			render "edit"
