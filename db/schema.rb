@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 20160427100420) do
     t.string   "job"
     t.integer  "role"
     t.text     "description"
+
+  create_table "items", force: :cascade do |t|
+    t.string   "category"
+    t.string   "name"
+    t.string   "image"
+    t.integer  "count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
