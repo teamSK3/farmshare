@@ -17,10 +17,10 @@
   </tr>
   <% @users.each do |user| %>
   <tr>
-    <td><%= link_to user.name, user %></td>
-    <td><%= user.job %></td>
-    <td><%= user.role %></td>
-    <td><%= image_tag user.image_url %></td>
+    <td><%#= link_to user.name, user %></td>
+    <td><%#= user.job %></td>
+    <td><%#= user.role %></td>
+    <td><%#= image_tag user.image_url %></td>
     <td>
       <%= link_to "編集",  [:edit, user] %> |
       <%= link_to "削除", user, method: :delete,
