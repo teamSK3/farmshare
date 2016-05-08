@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
   resources :tweets
   devise_for :users
+
+  get "show" => "users#show"
+
+  resources :users do
+      collection { get "search"}
+    end
+
+  resources :items
+  root :to => 'top#index'
+   get '/top' => 'top#home'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
