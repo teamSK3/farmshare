@@ -3,25 +3,25 @@
 <table>
   <tr>
     <th><%= form.label :name, "氏名" %></th>
-    <td><%= form.text_field :name %></td>
+    <td><%#= form.text_field :name %></td>
   </tr>
   <tr>
     <th><%= form.label :job, "職業" %></th>
-    <td><%= form.text_field :job %></td>
+    <td><%#= form.text_field :job %></td>
   </tr>
   <tr>
     <th><%= form.label :description, "紹介文" %></th>
-    <td><%= form.text_area :description, cols: 40, rows: 5 %></td>
+    <td><%#= form.text_area :description, cols: 40, rows: 5 %></td>
   </tr>
   <tr>
-    <th><%= User.human_attribute_name("会員区分") %></th>
+    <th><%#= User.human_attribute_name("会員区分") %></th>
     <td>
-      <%= form.radio_button :role, 0 %>農家の方
-      <%= form.radio_button :role, 1 %>購入者の方
+      <%#= form.radio_button :role, 0 %>農家の方
+      <%#= form.radio_button :role, 1 %>購入者の方
     </td>
   </tr>
   <tr>
     <th><%= form.label :image %></th>
-    <td><%= form.file_field :image %></td>
+    <td><%=# form.file_field :image %></td>
   </tr>
 </table>
